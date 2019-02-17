@@ -33,8 +33,8 @@ public class MuKeTest {
             Thread.sleep(1000);
 
             //鼠标操作
-            mouseAction();
-            //iframe();
+//            mouseAction();
+            iframe();
         Thread.sleep(2000);
         /**
          * 关闭所有页面quit
@@ -46,11 +46,12 @@ public class MuKeTest {
     /**
      * iframe操作
      */
-    public static void iframe(){
+    public static void iframe() throws InterruptedException {
         driver.get("https://www.imooc.com/wiki/create");
         //找到ifrmae
         WebElement iframe = driver.findElement(By.id("ueditor_0"));
         driver.switchTo().frame(iframe);
+        Thread.sleep(3000);
         driver.findElement(By.xpath("/html/body")).sendKeys("anjie");
         driver.switchTo().defaultContent();
     }

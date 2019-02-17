@@ -79,14 +79,16 @@ Action.moveToElement(webElement).perform();
         * getWindowHandles()
     * 对话框
 * 等待函数
-    * 强制等待 Thread.sleep()
-    * 显示等待 new WebDriverWait(driver,15).until(   
+    * 强制等待【死等】 Thread.sleep()
+    * 显示等待【显示等待就是有条件的等待】【规定时间内找到继续执行；否则报错】 new WebDriverWait(driver,15).until(   
                    ExpectedConditions.presenceOfElementLoacted(By.id("id"))
-              )
-    * 隐式等待
+              ) 
+    * 隐式等待【隐式等待就是无条件的等待】【一直查找直到制定时间，超过报错】Driver.manage().timeouts.implicitlyWait(10,TimeUnit.SECONDS)
        
 ### 常见问题处理
 * 在点击页面按钮时，有其他控件遮挡，可以使用js隐藏其他按钮
     * document.getElementById("id).style.display="none"
-##
+### selenium面试技巧
+   
+
 ##
