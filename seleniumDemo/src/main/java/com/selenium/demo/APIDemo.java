@@ -10,9 +10,13 @@ public class APIDemo {
     public static void main(String[] args) throws InterruptedException {
         //初始化一个chrome浏览器实例driver
         WebDriver driver = new ChromeDriver();
+
         // get(url)打开一个网站
 //        driver.get("https://www.baidu.com");
         driver.navigate().to("http://www.ahic.com.cn");
+        Thread.sleep(2000);
+        driver.manage().window().maximize();
+
         /**
          * 操作浏览器
          */
@@ -21,7 +25,6 @@ public class APIDemo {
 //        driver.navigate().refresh();
 //        driver.getTitle();
 //        driver.getCurrentUrl();
-        driver.manage().window().maximize();
         //操作滚动条，转为js对象，执行js代码
 //        JavascriptExecutor jsdriver = (JavascriptExecutor) driver;
 //        jsdriver.executeScript("window.scrollTo(0,document.body.scrollHeight)\n");

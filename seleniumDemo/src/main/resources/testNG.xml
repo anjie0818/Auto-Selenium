@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Default Suite">
+  <test name="Auto-Selenium">
+    <classes>
+      <class name="com.selenium.muke.MukeLoginScript">
+        <methods>
+          <include name="init"/>
+          <include name="goLogin"/>
+        </methods>
+      </class> <!-- com.selenium.muke.MukeLoginScript -->
+    </classes>
+  </test> <!-- Auto-Selenium -->
+</suite> <!-- Default Suite -->

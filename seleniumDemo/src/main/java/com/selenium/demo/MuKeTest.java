@@ -11,12 +11,14 @@ import java.util.Set;
 public class MuKeTest {
     static WebDriver  driver;
     public static void init(){
+        System.setProperty("webdriver.chrome.driver", "F:\\IdeaProjects\\Auto-Selenium\\image\\chromedriver.exe");
         driver = new ChromeDriver();
     }
     public static void main(String[] args) throws Exception {
             init();
             //初始化一个chrome浏览器实例driver
             driver.navigate().to("https://www.imooc.com/");
+            Thread.sleep(1000);
             driver.manage().window().maximize();
             driver.findElement(By.linkText("登录")).click();
             Thread.sleep(1000);
