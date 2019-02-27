@@ -1,8 +1,13 @@
 package com.selenium.mukePageObject.base;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Cookie;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
 
 /**
  * @创建人 anjie
@@ -18,6 +23,9 @@ public class DriverBase {
     public WebElement element(By by){
         return driver.findElement(by);
     }
+    public List<WebElement> elements(WebElement fatherWebElement,By by){
+        return fatherWebElement.findElements(by);
+    }
     public void stop(){
         driver.close();
     }
@@ -27,5 +35,30 @@ public class DriverBase {
     public void maximize(){
         driver.manage().window().maximize();
     }
+    public void backPage(){
+        driver.navigate().back();
+    }
+    /**
+     * 获取cookcie
+     * @return
+     * */
+    public Set<Cookie> getCookie(){
+        Set<Cookie> cookies = driver.manage().getCookies();
+        return cookies;
+    }
 
+    /**
+     * 删除cookie
+     * */
+    public void deleteCookie(){
+        driver.manage().deleteAllCookies();
+    }
+    /**
+     * 设置cookie
+     * */
+    public void setCookie(Cookie cookie){
+
+        driver.manage().addCookie(cookie);
+
+    }
 }

@@ -50,7 +50,7 @@
                     <forkMode>never</forkMode>
                     <argLine>-Dfile.encoding=UTF-8</argLine>
                     <suiteXmlFiles>
-                        <suiteXmlFile>F:\IdeaProjects\Auto-Selenium\seleniumDemo\src\main\resources\testNG.xml</suiteXmlFile>
+                        <suiteXmlFile>src\main\resources\testNG.xml</suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>
             </plugin>

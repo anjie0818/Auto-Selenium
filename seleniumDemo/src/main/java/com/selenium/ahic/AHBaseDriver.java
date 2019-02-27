@@ -1,9 +1,4 @@
 package com.selenium.ahic;
-
-import com.selenium.muke.MukeLoginScript;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -24,7 +19,6 @@ public class AHBaseDriver {
         String url4="www.ahic.com.cn";
 
         AhicTest.login("http://"+url4+"/web/ahic/web/user/ahlogin.jsp","0200002272","aa00000");
-//        AhicTest.login("http://"+url2+"/web/ahic/web/user/ahlogin.jsp","0200002824","0000");
     }
     @Test
     public void startDo() throws InterruptedException {
