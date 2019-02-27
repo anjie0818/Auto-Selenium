@@ -192,12 +192,12 @@ Action.moveToElement(webElement).perform();
     <parameter name="username" value="value1"/>
   <test name="Auto-Selenium">
     <classes>
-      <class name="com.selenium.mukePageObject.testCase.CourseCase">
+      <class name="com.CourseCase">
         <methods>
           <include name="test"/>
           <include name="test2"/>
         </methods>
-      </class> <!-- com.selenium.mukePageObject.testCase.CourseCase -->
+      </class> <!-- com.CourseCase -->
     </classes>
   </test> <!-- Auto-Selenium -->
 </suite> <!-- Default Suite -->
