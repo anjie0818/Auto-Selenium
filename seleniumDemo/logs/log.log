@@ -10,3 +10,6 @@
 2019-02-23 09:24:28  [ main:1 ] - [ DEBUG ]  This is debug message.
 2019-02-23 09:24:28  [ main:3 ] - [ INFO ]  This is info message.
 2019-02-23 09:24:28  [ main:3 ] - [ ERROR ]  This is error message.
+2019-02-23 09:41:55  [ main:0 ] - [ DEBUG ]  This is debug message.
+2019-02-23 09:41:55  [ main:3 ] - [ INFO ]  This is info message.
+2019-02-23 09:41:55  [ main:4 ] - [ ERROR ]  This is error message.

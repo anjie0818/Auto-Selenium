@@ -99,6 +99,29 @@ Action.moveToElement(webElement).perform();
 * 有多少case？通过率？老手（一个系统上千条case）;case越多通过率约高（一般70-80%）
 * 失败截图实现原理：testng监听+webdriver截图方法
 * 报告来源？统计什么？
+* Testng如何管理case
+* 实现多浏览器运行
+* case之间依赖处理（使用cookie）
+    * cookie
+    * 然后直接跳转到测试页面可以了
+* 常用断言
+    * 百度。。。
+* case如何运行
+    * 登录jenkins运行
+    * pom运行
+    * maven命令运行
+* 如何持续集成--？
+* 对工作满意吗？
+* 你做的最好的项目是什么？
+* 自动化流程是什么？
+* 如何控制项目进度？
+    * 测试时间尽量提前
+    * 无法完成，找产品砍功能模块
+    * 将风险降到最低
+* 你最大的优点？
+    * 体现在工作方面
+* 测试认为是bug,开发不认同该如何处理
+    
 ## 慕课网帐号登录测试实战
 ### 登陆功能需求分析及用例设计
 * 逻辑分析（从功能点分析测试点）
@@ -138,5 +161,6 @@ Action.moveToElement(webElement).perform();
 ![](./image/liuche.png)
 ### 用例编写
 ![](./image/liucheng2.png)
+## Testng的使用
 
 
