@@ -18,7 +18,8 @@ public class AHBaseDriver {
         String url3="10.0.0.173";
         String url4="www.ahic.com.cn";
 
-        AhicTest.login("http://"+url4+"/web/ahic/web/user/ahlogin.jsp","0200002272","aa00000");
+        AhicTest.login("http://"+url4+"/web/ahic/web/user/ahlogin.jsp","0200002272","");
+
     }
     @Test
     public void startDo() throws InterruptedException {

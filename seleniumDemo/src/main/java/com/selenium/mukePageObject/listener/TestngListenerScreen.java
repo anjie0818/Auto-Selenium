@@ -1,7 +1,6 @@
 package com.selenium.mukePageObject.listener;
 
-import com.selenium.muke.BaseDriver;
-import com.selenium.mukePageObject.base.DriverBase;
+
 import com.selenium.mukePageObject.testCase.CaseBase;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
