@@ -1,6 +1,6 @@
 package com.selenium.mukePageObject.page;
 
-import com.selenium.muke.GetByLocator;
+import com.selenium.mukePageObject.util.GetByLocator;
 import com.selenium.mukePageObject.base.DriverBase;
 import org.openqa.selenium.WebElement;
 

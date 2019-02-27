@@ -23,6 +23,18 @@
 ![](./image/工作原理.png)
 ## Selenium基础知识
 ### 元素定位
+```
+         *  定位元素的九种方法
+         *  By.id
+         *  By.name
+         *  By.tagName
+         *  By.className
+         *  By.xpath  //常用
+         *  By.css("#kw")
+         *  By.partialLinkText //模糊匹配
+         *  By.linkText（"糯米"） eg:<a>糯米<a/>
+         *  层级定位
+```
 ### 常见元素处理
 * 文本框
     * sendkeys
@@ -42,6 +54,14 @@
     * isEnabled
     * isDisplayed(这个元素是否显示？此方法避免了必须解析元素的“样式”属性的问题。)
 * 表单
+* 关闭窗口
+    * 关闭所有页面quit
+    * 关闭单个页面close
+* 操作JS
+```
+        JavascriptExecutor jsdriver = (JavascriptExecutor) driver;
+        jsdriver.executeScript("window.scrollTo(0,document.body.scrollHeight)");
+```
 * 上传文件
     * input标签，直接使用sendkeys("文件路径")
     * 使用第三分插件（au3）
@@ -154,13 +174,61 @@ Action.moveToElement(webElement).perform();
 	   dvier对象由case层初始化传递给base层   
 	   各层直接单链式通信，实现解耦      
 ### 引入log4j
+### 引入Testng
+#### 常用断言
+```
+    //常用方法
+    Assert.assertEquals();
+    Assert.assertTrue();
+    ...
+```
+#### 配置文件
+```
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<!--paralll设置多线程：目的缩短运行时间，提高测试效率-->
+<suite name="Default Suite" parallel="methods" thread-count="3">
+    <!--testng参数话-->
+    <parameter name="username" value="value1"/>
+  <test name="Auto-Selenium">
+    <classes>
+      <class name="com.selenium.mukePageObject.testCase.CourseCase">
+        <methods>
+          <include name="test"/>
+          <include name="test2"/>
+        </methods>
+      </class> <!-- com.selenium.mukePageObject.testCase.CourseCase -->
+    </classes>
+  </test> <!-- Auto-Selenium -->
+</suite> <!-- Default Suite -->
+@Test
+    @Parameters({"username"})
+    public void getCourseHome(String username) throws IOException {
+        System.out.println(username);
+        driverBase.open("https://coding.imooc.com/");
+        driverBase.maximize();
+        coursesPro.clickCourse();
+    }
+    @Test
+    public void test(){
+        System.out.println("=========="+Thread.currentThread().getId());
+    }
+    @Test
+    public void test2(){
+        System.out.println("=========="+Thread.currentThread().getId());
+    }
+```
 ### 优化测试报告    
 ## 慕课网购物流程测试实战
 ### 需求分析
 ### 用例设计
 ![](./image/liuche.png)
-### 用例编写
+### 功能测试用例编写
 ![](./image/liucheng2.png)
-## Testng的使用
+### 功能测试用例执行
+### 自动化测试用例编写
+![](./image/liucheng3.png)
+
+
 
 

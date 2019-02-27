@@ -1,5 +1,6 @@
-package com.selenium.muke;
+package com.selenium.mukePageObject.util;
 
+import com.selenium.mukePageObject.util.ProUtil;
 import org.openqa.selenium.By;
 
 import java.io.IOException;

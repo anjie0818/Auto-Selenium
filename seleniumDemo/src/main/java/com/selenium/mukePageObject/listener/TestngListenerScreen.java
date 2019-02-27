@@ -1,5 +1,7 @@
-package com.selenium.muke;
+package com.selenium.mukePageObject.listener;
 
+
+import com.selenium.mukePageObject.testCase.CaseBase;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -19,7 +21,7 @@ public class TestngListenerScreen extends TestListenerAdapter {
     public void onTestFailure(ITestResult tr) {
         super.onTestFailure(tr);
         System.out.println("onTestFailure....");
-        WebDriver driver=((BaseDriver)tr.getInstance()).getDriver();
+        WebDriver driver=((CaseBase)tr.getInstance()).driverBase.driver;
         try {
             this.takeScreenShot(driver);
         } catch (IOException e) {
@@ -29,7 +31,7 @@ public class TestngListenerScreen extends TestListenerAdapter {
     public void takeScreenShot(WebDriver driver) throws IOException {
         String path = String.valueOf(System.currentTimeMillis())+".png";
         String curPath = System.getProperty("user.dir");
-        String screenPath=curPath+"/"+path;
+        String screenPath=curPath+"/testImages/"+path;
         File screen = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
         FileUtils.copyFile(screen,new File(screenPath));
     }

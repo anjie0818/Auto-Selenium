@@ -1,4 +1,4 @@
-package com.selenium.muke;
+package com.selenium.mukePageObject.util;
 
 import java.io.*;
 import java.util.Properties;
@@ -23,4 +23,15 @@ public class ProUtil {
         properties.load(new InputStreamReader(in, "utf-8"));
         return properties.getProperty(key);
     }
+    public void writePro(String key,String value){
+        Properties pro = new Properties();
+        try {
+            FileOutputStream file = new FileOutputStream(url);
+            pro.setProperty(key, value);
+            pro.store(file, key);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
 }
