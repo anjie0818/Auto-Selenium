@@ -24,7 +24,7 @@ public class AHBaseDriver  {
         String url2="10.0.0.172";
         String url3="10.0.0.173";
         String url4="www.ahic.com.cn";
-        AhicTest.login("http://"+url4+"/web/ahic/web/user/ahlogin.jsp","0200003905","0000");
+        AhicTest.login("http://"+url4+"/web/ahic/web/user/ahlogin.jsp","0200003905","****");
     }
 
     @Test
