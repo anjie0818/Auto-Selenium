@@ -24,7 +24,7 @@ public class CourseDetailsPage extends BasePage {
     public List<String> selectAllCoursesText() throws IOException {
         WebElement selectAllCourses = element(GetByLocator.getLocator("selectAllCourses"));
         List<WebElement> allCoursesEle = elements(selectAllCourses, GetByLocator.getLocator("shizan-name"));
-        List<String> allCoursesText=new ArrayList<>();
+        List<String> allCoursesText=new ArrayList<String>();
         for (WebElement webElement:allCoursesEle
              ) {
             allCoursesText.add(webElement.getText());
@@ -35,7 +35,6 @@ public class CourseDetailsPage extends BasePage {
            String[] CourseArray = courseName.split(" ");
            List<String> list = Arrays.asList(CourseArray);
            Collections.sort(list, new Comparator<String>() {
-               @Override
                public int compare(String o1, String o2) {
                    return o1.length() < o2.length() ? 1 : -1;
                }
@@ -49,7 +48,6 @@ public class CourseDetailsPage extends BasePage {
             String[] array = new String[]{"123", "sefwer", "z", "sfs", "eytrywer"};
             List<String> list = Arrays.asList(array);
             Collections.sort(list, new Comparator<String>() {
-                @Override
                 public int compare(String o1, String o2) {
                     return o1.length() < o2.length() ? 1 : -1;
                 }

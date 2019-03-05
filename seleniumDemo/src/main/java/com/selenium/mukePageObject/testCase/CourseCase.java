@@ -3,6 +3,7 @@ package com.selenium.mukePageObject.testCase;
 import com.selenium.mukePageObject.business.CoursesPro;
 import com.selenium.mukePageObject.util.HandleCookie;
 import org.apache.log4j.Logger;
+import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -30,8 +31,18 @@ public class CourseCase extends CaseBase {
 
     @Test
     public void getCourseHome() throws IOException {
-//        Assert.assertEquals(1,2);
-//        coursesPro.clickCourse();
+        Assert.assertEquals(1,2);
+        coursesPro.clickCourse();
+    }
+    @Test
+    public void getCourseHome1() throws IOException {
+        Assert.assertEquals(1,1);
+        coursesPro.clickCourse();
+    }
+    @Test
+    public void getCourseHome2() throws IOException {
+        Assert.assertEquals(1,1);
+        coursesPro.clickCourse();
     }
 
 }

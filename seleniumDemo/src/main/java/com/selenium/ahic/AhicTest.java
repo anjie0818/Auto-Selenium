@@ -17,11 +17,11 @@ import java.util.concurrent.TimeUnit;
 public class AhicTest {
     static WebDriver driver;
 
-    public static void init() {
-        System.setProperty("webdriver.chrome.driver", "F:\\IdeaProjects\\Auto-Selenium\\image\\chromedriver.exe");
+    public static WebDriver init() {
+        System.setProperty("webdriver.chrome.driver", "C:\\Users\\anjie\\AppData\\Local\\Google\\Chrome\\Application\\chromedriver.exe");
         driver = new ChromeDriver();
         driver.manage().window().maximize();
-
+        return driver;
     }
     public static void SelectPolicyno(){
         driver.switchTo().defaultContent();
