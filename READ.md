@@ -192,12 +192,12 @@ Action.moveToElement(webElement).perform();
     <parameter name="username" value="value1"/>
   <test name="Auto-Selenium">
     <classes>
-      <class name="com.selenium.mukePageObject.testCase.CourseCase">
+      <class name="com.CourseCase">
         <methods>
           <include name="test"/>
           <include name="test2"/>
         </methods>
-      </class> <!-- com.selenium.mukePageObject.testCase.CourseCase -->
+      </class> <!-- com.CourseCase -->
     </classes>
   </test> <!-- Auto-Selenium -->
 </suite> <!-- Default Suite -->
@@ -228,6 +228,8 @@ Action.moveToElement(webElement).perform();
 ### 功能测试用例执行
 ### 自动化测试用例编写
 ![](./image/liucheng3.png)
+### 引入Jenkins
+### 邮件服务
 
 
 

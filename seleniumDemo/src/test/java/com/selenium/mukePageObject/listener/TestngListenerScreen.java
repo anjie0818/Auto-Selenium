@@ -1,4 +1,4 @@
-package com.selenium.ahic;
+package com.selenium.mukePageObject.listener;
 
 
 import org.apache.commons.io.FileUtils;
@@ -7,6 +7,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestResult;
 import org.testng.TestListenerAdapter;
+import com.selenium.mukePageObject.testCase.CaseBase;
 
 import java.io.File;
 import java.io.IOException;
@@ -20,7 +21,8 @@ public class TestngListenerScreen extends TestListenerAdapter {
     public void onTestFailure(ITestResult tr) {
         super.onTestFailure(tr);
         System.out.println("onTestFailure....");
-        WebDriver driver=((AHBaseDriver)tr.getInstance()).driver;
+        Object dd = tr.getInstance();
+        WebDriver driver=((CaseBase)tr.getInstance()).driverBase.driver;
         try {
             this.takeScreenShot(driver);
         } catch (IOException e) {
