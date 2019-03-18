@@ -1,0 +1,1 @@
+java -jar F:\IdeaProjects\VBlog\blogserver\target\blogserver-0.0.1-SNAPSHOT.jar

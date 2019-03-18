@@ -5,6 +5,9 @@
   <test name="Auto-Selenium">
     <classes>
       <class name="com.selenium.ahic.AHBaseDriver">
+        <methods>
+          <include name="${envName}"></include>
+        </methods>
       </class> <!-- com.selenium.mukePageObject.testCase.CourseCase -->
       <!--<class name="com.selenium.mukePageObject.testCase.loginCase">-->
       <!--</class>-->
