@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Default Suite" parallel="false" thread-count="10">
-    <parameter name="username" value="value1"/>
+<suite name="Default Suite" parallel="true" thread-count="10">
   <test name="Auto-Selenium">
     <classes>
       <class name="com.selenium.ahic.AHBaseDriver">
         <methods>
-          <include name="${envName}"></include>
+          <include name="SelectPolicyno"/>
+
         </methods>
-      </class> <!-- com.selenium.mukePageObject.testCase.CourseCase -->
-      <!--<class name="com.selenium.mukePageObject.testCase.loginCase">-->
-      <!--</class>-->
+      </class>
+
     </classes>
   </test> <!-- Auto-Selenium -->
 </suite> <!-- Default Suite -->

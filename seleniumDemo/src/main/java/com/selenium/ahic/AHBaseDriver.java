@@ -1,10 +1,7 @@
 package com.selenium.ahic;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Listeners;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 import com.selenium.ahic.TestngListenerScreen;
 
 /**
@@ -24,50 +21,67 @@ public class AHBaseDriver  {
         String url2="10.0.0.172";
         String url3="10.0.0.173";
         String url4="www.ahic.com.cn";
-//        AhicTest.login("http://"+url4+"/web/ahic/web/user/ahlogin.jsp","0200003722","KP0000");
-        AhicTest.login("http://"+url3+"/web/ahic/web/user/ahlogin.jsp","0200003857","0000");
+        AhicTest.login("http://"+url1+"/web/ahic/web/user/ahlogin.jsp","0200440001","0000");
+//        AhicTest.login("http://"+url3+"/web/ahic/web/user/ahlogin.jsp","0200003857","0000");
     }
 
     @Test
     public void startDo() throws InterruptedException {
-         AhicTest.startDo();
+//         AhicTest.startDo();
     }
     @Test
     public void SelectPolicyno(){
+        System.out.println("================="+Thread.currentThread().getId());
         AhicTest.SelectPolicyno();
     }
     @Test
     public void SelectFaPiao(){
+        System.out.println("================="+Thread.currentThread().getId());
+
         AhicTest.SelectFaPiao();
     }
     @Test
     public void SelectPrint(){
+        System.out.println("================="+Thread.currentThread().getId());
+
         AhicTest.SelectPrint();
     }
     @Test
     public void SelectDangZheng(){
+        System.out.println("================="+Thread.currentThread().getId());
+
         AhicTest.SelectDangZheng();
     }
     @Test
     public void SelectPiGai(){
+        System.out.println("================="+Thread.currentThread().getId());
+
         AhicTest.SelectPiGai();
     }
     @Test
     public void SelectVIN(){
+        System.out.println("================="+Thread.currentThread().getId());
+
         AhicTest.SelectVIN();
     }
     @Test
     public void SelectTeShuYeWu(){
+        System.out.println("================="+Thread.currentThread().getId());
+
         AhicTest.SelectTeShuYeWu();
 
     }
     @Test
     public void SelectUpload(){
+        System.out.println("================="+Thread.currentThread().getId());
+
         AhicTest.SelectUpload();
 
     }
     @AfterClass
     public void teardown() throws InterruptedException {
+        System.out.println("================="+Thread.currentThread().getId());
+
         System.out.println("end test");
         Thread.sleep(2000);
 //        AhicTest.driver.close();

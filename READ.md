@@ -230,7 +230,8 @@ Action.moveToElement(webElement).perform();
 ![](./image/liucheng3.png)
 ### 引入Jenkins
 ### 邮件服务
-
+### chrome无界面运行
+https://www.cnblogs.com/cation/p/8954918.html
 
 
 
