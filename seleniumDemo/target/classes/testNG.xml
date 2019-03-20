@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Default Suite" parallel="true" thread-count="10">
+<suite name="Default Suite" parallel="classes" thread-count="10">
   <test name="Auto-Selenium">
     <classes>
-      <class name="com.selenium.ahic.AHBaseDriver">
-        <methods>
-          <include name="SelectPolicyno"/>
-
-        </methods>
+      <class name="com.selenium.ahic.test"></class>
+      <class name="com.selenium.ahic.test2">
       </class>
 
     </classes>
